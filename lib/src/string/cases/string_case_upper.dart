@@ -25,7 +25,7 @@ String upperCamelCase(String string) {
 
 ///[upperUnderscoreCase] capitalize the all characters and replace whitespaces with underscore '_'.
 ///```dart
-/// upperCamelCase('upper camel case') // 'UPPER_CAMEL_CASE'
+/// upperUnderscoreCase('upper camel case') // 'UPPER_CAMEL_CASE'
 ///```
 String upperUnderscoreCase(String string) {
   if (isUpperCase(string)) return string.replaceAll(' ', '_');

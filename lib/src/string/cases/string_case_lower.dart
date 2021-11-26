@@ -25,7 +25,6 @@ String lowerCamelCase(String string) {
   return string[0].toLowerCase() + string.substring(1);
 }
 
-
 ///[lowerUnderscoreCase] make minuscule all characters and replace whitespaces with underscore '_'.
 ///```dart
 /// lowerUnderscoreCase('lower camel case') // 'lower_camel_case'
