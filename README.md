@@ -1,8 +1,8 @@
 # more_functions
 
-[![Pub Version](https://img.shields.io/pub/v/auth_buttons?color=blue&logo=dart)](https://pub.dev/packages/more_functions)
-[![Github stars](https://img.shields.io/github/stars/elbeicktalat/flutter_auth_buttons?logo=github)](https://github.com/elbeicktalat/more_functions)
-[![License Style](https://img.shields.io/github/license/elbeicktalat/dart_more_functions)](https://github.com/elbeicktalat/more_functions/blob/main/LICENSE)
+[![Pub Version](https://img.shields.io/pub/v/more_functions?color=blue&logo=dart)](https://pub.dev/packages/more_functions)
+[![Github stars](https://img.shields.io/github/stars/elbeicktalat/dart_more_functions?logo=github)](https://github.com/elbeicktalat/dart_more_functions)
+[![License Style](https://img.shields.io/github/license/elbeicktalat/dart_more_functions)](https://github.com/elbeicktalat/dart_more_functions/blob/main/LICENSE)
 
 A dart package which provides a lot of helpers functions for easy development.
 
