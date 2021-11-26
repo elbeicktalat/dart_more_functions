@@ -22,6 +22,12 @@ String lastChar(String string) {
   return String.fromCharCode(string.trim().runes.last);
 }
 
+///[lastCharIndex] returns the index of the last character of given [string],
+/// without leading and trailing whitespace counting.
+int lastCharIndex(String string) {
+  return string.trim().length - 1;
+}
+
 ///[charAt()] returns character at that specific [index] of the given [string],
 /// without leading and trailing whitespace.
 /// ```dart
