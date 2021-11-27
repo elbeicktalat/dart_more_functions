@@ -78,7 +78,7 @@ String upperCamelCase(
   bool attached = false,
   String betweenWords = '',
 }) {
-  string = string.trim();
+  string = string.trim().toLowerCase();
   final List<String> words = string.split(' ');
   final List<String> capitalized = [];
   for (String word in words) {
