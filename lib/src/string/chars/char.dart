@@ -7,7 +7,7 @@ part of string_helpers;
 /// firstChar('  dart') // returns 'd'
 /// firstChar('dart  ') // returns 'd'
 /// ```
-String firstChar(String string) {
+String getFirstChar(String string) {
   return String.fromCharCode(string.trim().runes.first);
 }
 
@@ -18,13 +18,13 @@ String firstChar(String string) {
 /// lastChar('dart  ') // returns 't'
 /// lastChar('  dart') // returns 't'
 /// ```
-String lastChar(String string) {
+String getLastChar(String string) {
   return String.fromCharCode(string.trim().runes.last);
 }
 
-///[lastCharIndex] returns the index of the last character of given [string],
+///[getLastCharIndex] returns the index of the last character of given [string],
 /// without leading and trailing whitespace counting.
-int lastCharIndex(String string) {
+int getLastCharIndex(String string) {
   return string.trim().length - 1;
 }
 
@@ -34,6 +34,6 @@ int lastCharIndex(String string) {
 /// charAt('dart', 1) // returns 'a'
 /// charAt('  dart   ', 1) // returns 'a'
 /// ```
-String charAt(String string, int index) {
+String getCharAt(String string, int index) {
   return String.fromCharCode(string.trim().runes.elementAt(index));
 }

@@ -1,6 +1,5 @@
-import 'package:more_functions/more_functions.dart';
+import 'package:more_functions/more_functions.dart' show getFirstToLowerCase;
 
 void main() {
-  var awesome = Awesome();
-  print('awesome: ${awesome.isAwesome}');
+  print(getFirstToLowerCase('UPPER UNDERSCORE CASE'));
 }

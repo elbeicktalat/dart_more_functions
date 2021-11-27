@@ -26,7 +26,7 @@ String getFirstToUpperCase(
     }
     return capitalized.join(' ');
   }
-  return firstChar(string).toUpperCase() + string.substring(1);
+  return getFirstChar(string).toUpperCase() + string.substring(1);
 }
 
 ///[getLastToUpperCase] capitalize the last character of the given [string].
@@ -55,8 +55,8 @@ String getLastToUpperCase(
     }
     return capitalized.join(' ');
   }
-  return string.substring(0, lastCharIndex(string)) +
-      lastChar(string).toUpperCase();
+  return string.substring(0, getLastCharIndex(string)) +
+      getLastChar(string).toUpperCase();
 }
 
 ///[getUpperCamelCase] capitalize the first character words of the given [string].

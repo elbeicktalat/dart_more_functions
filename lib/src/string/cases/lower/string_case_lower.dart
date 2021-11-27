@@ -25,7 +25,7 @@ String getFirstToLowerCase(
     }
     return lowercased.join(' ');
   }
-  return firstChar(string).toLowerCase() + string.substring(1);
+  return getFirstChar(string).toLowerCase() + string.substring(1);
 }
 
 ///[getLastToLowerCase] makes minuscule the last character of the given [string].
@@ -53,8 +53,8 @@ String getLastToLowerCase(
     }
     return lowercased.join(' ');
   }
-  return string.substring(0, lastCharIndex(string)) +
-      lastChar(string).toLowerCase();
+  return string.substring(0, getLastCharIndex(string)) +
+      getLastChar(string).toLowerCase();
 }
 
 ///[getLowerCamelCase] makes minuscule the first word character
@@ -84,7 +84,7 @@ String getLowerCamelCase(
   for (String word in words) {
     capitalized.add(getFirstToUpperCase(word));
   }
-  final String _firstChar = firstChar(capitalized.first).toLowerCase();
+  final String _firstChar = getFirstChar(capitalized.first).toLowerCase();
   if (attached) {
     betweenWords = betweenWords.trim();
     return _firstChar + capitalized.join(betweenWords).substring(1);

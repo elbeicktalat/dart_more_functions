@@ -27,7 +27,7 @@ bool getIsLowerCase(String string) {
 /// firstIsUpper('Dart') // true
 ///```
 bool getFirstIsUpperCase(String string) {
-  return firstChar(string) == firstChar(string).toUpperCase();
+  return getFirstChar(string) == getFirstChar(string).toUpperCase();
 }
 
 ///[getLastIsUpperCase] check if the last character of the given [string] is uppercase.
@@ -37,7 +37,7 @@ bool getFirstIsUpperCase(String string) {
 /// lastIsUpper('darT') // true
 ///```
 bool getLastIsUpperCase(String string) {
-  return lastChar(string) == lastChar(string).toUpperCase();
+  return getLastChar(string) == getLastChar(string).toUpperCase();
 }
 
 ///[getFirstIsLowerCase] check if the first character of the given [string] is lowercase.
@@ -47,7 +47,7 @@ bool getLastIsUpperCase(String string) {
 /// firstIsLower('darT') // true
 ///```
 bool getFirstIsLowerCase(String string) {
-  return firstChar(string) == firstChar(string).toLowerCase();
+  return getFirstChar(string) == getFirstChar(string).toLowerCase();
 }
 
 ///[getLastIsLowerCase] check if the last character of the given [string] is lowercase.
@@ -57,7 +57,7 @@ bool getFirstIsLowerCase(String string) {
 /// lastIsLower('Dart') // true
 ///```
 bool getLastIsLowerCase(String string) {
-  return lastChar(string) == lastChar(string).toLowerCase();
+  return getLastChar(string) == getLastChar(string).toLowerCase();
 }
 
 ///[getCharAtIsUpperCase] check if character at that specific [index] of the given [string] is uppercase.
@@ -66,7 +66,7 @@ bool getLastIsLowerCase(String string) {
 /// charAtIsUpper('dART', 1) // true
 ///```
 bool getCharAtIsUpperCase(String string, int index) {
-  return charAt(string, index) == charAt(string, index).toUpperCase();
+  return getCharAt(string, index) == getCharAt(string, index).toUpperCase();
 }
 
 ///[getCharAtIsLowerCase] check if character at that specific [index] of the given [string] is lowercase.
@@ -75,5 +75,5 @@ bool getCharAtIsUpperCase(String string, int index) {
 /// charAtIsUpper('dART', 1) // false
 ///```
 bool getCharAtIsLowerCase(String string, int index) {
-  return charAt(string, index) == charAt(string, index).toLowerCase();
+  return getCharAt(string, index) == getCharAt(string, index).toLowerCase();
 }
