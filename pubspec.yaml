@@ -1,7 +1,7 @@
 name: more_functions
 description: A dart package which provides a lot of helpers functions for easy development.
 version: 0.0.1
-# homepage: https://www.example.com
+homepage: https://github.com/elbeicktalat/dart_more_functions
 
 environment:
   sdk: '>=2.14.4 <3.0.0'
