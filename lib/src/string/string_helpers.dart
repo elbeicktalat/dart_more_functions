@@ -7,5 +7,6 @@ part 'cases/lower/string_case_lower.dart';
 part 'cases/upper/extension_string_case_upper.dart';
 part 'cases/upper/string_case_upper.dart';
 part 'chars/char.dart';
-
 part 'chars/extension_char.dart';
+
+part 'utils/whitespace.dart';
