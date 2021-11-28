@@ -9,4 +9,6 @@ part 'cases/upper/string_case_upper.dart';
 part 'chars/char.dart';
 part 'chars/extension_char.dart';
 
+part 'utils/symbol.dart';
+
 part 'utils/whitespace.dart';
