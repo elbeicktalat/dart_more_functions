@@ -1,3 +1,7 @@
+// Copyright (c) 2021. Talat El Beick. All rights reserved.
+// Use of this source code is governed by a MIT-style license that can be
+// found in the LICENSE file.
+
 part of string_helpers;
 
 ///[getFirstToLowerCase] makes minuscule the first character of the given [string].
@@ -12,8 +16,7 @@ part of string_helpers;
 /// //capitalize only first character of every word.
 /// getFirstToLowerCase('FIRST CHAR TO LOWER', allWords: true) // 'fIRST cHAR tO lOWER'
 ///```
-String getFirstToLowerCase(
-  String string, {
+String getFirstToLowerCase(String string, {
   bool allWords = false,
 }) {
   string = string.trim();
@@ -40,8 +43,7 @@ String getFirstToLowerCase(
 /// //makes minuscule only last character of every word.
 /// getLastToLowerCase('LAST TO LOWERCASE') // 'LASt To LOWERCASe'
 ///```
-String getLastToLowerCase(
-  String string, {
+String getLastToLowerCase(String string, {
   bool allWords = false,
 }) {
   string = string.trim();
@@ -73,8 +75,7 @@ String getLastToLowerCase(
 /// getLowerCamelCase('LOWER CAMEL CASE', attached: true, betweenWords: '  /  ') // 'lower/Camel/Case'
 /// getLowerCamelCase('LOWER CAMEL CASE', betweenWords: '// ') // 'lower// Camel// Case'
 ///```
-String getToLowerCamelCase(
-  String string, {
+String getToLowerCamelCase(String string, {
   bool attached = false,
   String betweenWords = '',
 }) {

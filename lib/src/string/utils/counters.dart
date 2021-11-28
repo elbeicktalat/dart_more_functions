@@ -1,3 +1,7 @@
+// Copyright (c) 2021. Talat El Beick. All rights reserved.
+// Use of this source code is governed by a MIT-style license that can be
+// found in the LICENSE file.
+
 part of string_helpers;
 
 ///[getCharCount] Returns the character count of the given [string].
@@ -11,8 +15,7 @@ part of string_helpers;
 /// getCharCount('Dart lang', ignoreWhitespace: true) // returns 8
 /// getCharCount('Dart lang', ignoreWhitespace: true, excludes: ['n', 'g']) // returns 6
 ///```
-int getCharCount(
-  String string, {
+int getCharCount(String string, {
   List<String>? excludes,
   bool ignoreWhitespace = false,
 }) {
@@ -50,8 +53,7 @@ int getCharCount(
 /// getWordsCount('hello world !', ignoreSymbols: false, excludes: ['!']) // [hello, world] returns 2
 /// getWordsCount('hello world !', ignoreSymbols: false, excludes: ['world']) // [hello, !] returns 2
 /// ```
-int getWordsCount(
-  String string, {
+int getWordsCount(String string, {
   List<String>? excludes,
   bool ignoreSymbols = true,
 }) {

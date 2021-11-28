@@ -1,3 +1,7 @@
+// Copyright (c) 2021. Talat El Beick. All rights reserved.
+// Use of this source code is governed by a MIT-style license that can be
+// found in the LICENSE file.
+
 part of string_helpers;
 
 ///[getFirstToUpperCase] capitalize the first character of the given [string].
@@ -13,8 +17,7 @@ part of string_helpers;
 /// //capitalize only first character of every word.
 /// getFirstToUpperCase('first char to upper', allWords: true) // 'First Char To Upper'
 ///```
-String getFirstToUpperCase(
-  String string, {
+String getFirstToUpperCase(String string, {
   bool allWords = false,
 }) {
   string = string.trim();
@@ -42,8 +45,7 @@ String getFirstToUpperCase(
 /// //capitalize only last character of every word.
 /// getLastToUpperCase('last char to upper', allWords: true) // 'lasT chaR tO uppeR'
 ///```
-String getLastToUpperCase(
-  String string, {
+String getLastToUpperCase(String string, {
   bool allWords = false,
 }) {
   string = string.trim();
@@ -73,8 +75,7 @@ String getLastToUpperCase(
 /// getUpperCamelCase('upper camel case', attached: true, betweenWords: '/') // 'Upper/Camel/Case'
 /// getUpperCamelCase('upper camel case', attached: true, betweenWords: '//') // 'Upper//Camel//Case'
 ///```
-String getToUpperCamelCase(
-  String string, {
+String getToUpperCamelCase(String string, {
   bool attached = false,
   String betweenWords = '',
 }) {
