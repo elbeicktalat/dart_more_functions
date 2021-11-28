@@ -57,7 +57,7 @@ String getLastToLowerCase(
       getLastChar(string).toLowerCase();
 }
 
-///[getLowerCamelCase] makes minuscule the first word character
+///[getToLowerCamelCase] makes minuscule the first word character
 /// and capitalize the first character of the next words.
 ///
 ///By default words will have a whitespace between each other,
@@ -73,7 +73,7 @@ String getLastToLowerCase(
 /// getLowerCamelCase('LOWER CAMEL CASE', attached: true, betweenWords: '  /  ') // 'lower/Camel/Case'
 /// getLowerCamelCase('LOWER CAMEL CASE', betweenWords: '// ') // 'lower// Camel// Case'
 ///```
-String getLowerCamelCase(
+String getToLowerCamelCase(
   String string, {
   bool attached = false,
   String betweenWords = '',
@@ -92,12 +92,12 @@ String getLowerCamelCase(
   return _firstChar + capitalized.join(betweenWords + ' ').substring(1);
 }
 
-///[getLowerSnakeCase] make minuscule all characters and replace whitespaces with underscore '_'.
+///[getToLowerSnakeCase] make minuscule all characters and replace whitespaces with underscore '_'.
 ///```dart
 /// getLowerSnakeCase('lower underscore case') // 'lower_underscore_case'
 /// getLowerSnakeCase('LOWER UNDERSCORE CASE') // 'lower_underscore_case'
 ///```
-String getLowerSnakeCase(String string) {
+String getToLowerSnakeCase(String string) {
   if (string.isLowerCase) return string.replaceAll(' ', '_');
   return string.toLowerCase().replaceAll(' ', '_');
 }

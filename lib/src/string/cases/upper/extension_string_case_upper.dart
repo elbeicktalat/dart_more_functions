@@ -24,7 +24,7 @@ extension ExtensionsStringCaseUpper on String {
   ///```dart
   /// 'upper camel case'.toLowerCamelCase; // 'Upper Camel Case'
   ///```
-  String get toUpperCamelCase => getUpperCamelCase(this);
+  String get toUpperCamelCase => getToUpperCamelCase(this);
 
   /// **toUpperSnakeCase** known as **toUpperUnderscoreCase**.
   ///
@@ -34,5 +34,5 @@ extension ExtensionsStringCaseUpper on String {
   /// 'upper underscore case'.toLowerSnakeCase; // 'UPPER_UNDERSCORE_CASE'
   /// 'LOWER UNDERSCORE CASE'.toLowerSnakeCase; // 'UPPER_UNDERSCORE_CASE'
   ///```
-  String get toUpperSnakeCase => getUpperSnakeCase(this);
+  String get toUpperSnakeCase => getToUpperSnakeCase(this);
 }

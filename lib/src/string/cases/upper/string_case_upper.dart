@@ -59,7 +59,7 @@ String getLastToUpperCase(
       getLastChar(string).toUpperCase();
 }
 
-///[getUpperCamelCase] capitalize the first character words of the given [string].
+///[getToUpperCamelCase] capitalize the first character words of the given [string].
 ///
 ///By default words will have a whitespace between each other,
 /// if [attached] set to true the result wil be concatenate.
@@ -73,7 +73,7 @@ String getLastToUpperCase(
 /// getUpperCamelCase('upper camel case', attached: true, betweenWords: '/') // 'Upper/Camel/Case'
 /// getUpperCamelCase('upper camel case', attached: true, betweenWords: '//') // 'Upper//Camel//Case'
 ///```
-String getUpperCamelCase(
+String getToUpperCamelCase(
   String string, {
   bool attached = false,
   String betweenWords = '',
@@ -89,11 +89,11 @@ String getUpperCamelCase(
   return capitalized.join(betweenWords + ' ');
 }
 
-///[getUpperSnakeCase] capitalize the all characters and replace whitespaces with underscore '_'.
+///[getToUpperSnakeCase] capitalize the all characters and replace whitespaces with underscore '_'.
 ///```dart
 /// getUpperSnakeCase('upper camel case') // 'UPPER_CAMEL_CASE'
 ///```
-String getUpperSnakeCase(String string) {
+String getToUpperSnakeCase(String string) {
   if (string.isUpperCase) return string.replaceAll(' ', '_');
   return string.toUpperCase().replaceAll(' ', '_');
 }
