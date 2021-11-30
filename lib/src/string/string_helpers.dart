@@ -4,13 +4,26 @@
 
 library string_helpers;
 
-part 'cases/string_case_assertions.dart';
+part 'case/string_case_assertion.dart';
 
-part 'cases/string_lower_case.dart';
+part 'case/string_lower_case.dart';
 
-part 'cases/string_upper_case.dart';
-part 'chars/char_getters.dart';
-part 'chars/char_position.dart';
+part 'case/string_upper_case.dart';
+
+part 'char/char_getter.dart';
+
+part 'char/char_position.dart';
+
 part 'utils/counters.dart';
-part 'utils/symbol.dart';
-part 'utils/whitespace.dart';
+
+part 'utils/symbol/add_symbol.dart';
+
+part 'utils/symbol/remove_symbol.dart';
+
+part 'utils/symbol/symbol_assertion.dart';
+
+part 'utils/whitespace/add_whitespace.dart';
+
+part 'utils/whitespace/remove_whitespace.dart';
+
+part 'utils/whitespace/whitespace_assertion.dart';

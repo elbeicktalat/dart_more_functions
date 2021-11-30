@@ -4,7 +4,7 @@
 
 part of string_helpers;
 
-extension CharPosition on String {
+extension StringCharPosition on String {
   ///[lastCharIndex] Returns the index of the last character of this [string],
   /// without leading and trailing whitespace counting.
   int get lastCharIndex => trim().length - 1;

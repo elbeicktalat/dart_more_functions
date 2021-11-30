@@ -4,7 +4,7 @@
 
 part of string_helpers;
 
-extension CharGetters on String {
+extension StringCharGetter on String {
   ///[firstChar] Returns the first character in this string,
   /// without leading and trailing whitespace.
   /// ```dart
