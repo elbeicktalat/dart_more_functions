@@ -4,8 +4,8 @@
 
 part of string_helpers;
 
-String getRemoveSymbols(String string) {
-  return string.replaceAll(RegExp(r'[^\w\s]+'), '');
+extension StringSymbol on String {
+  String get removeAllSymbols => replaceAll(RegExp(r'[^\w\s]+'), '');
 }
 
 //assertions
