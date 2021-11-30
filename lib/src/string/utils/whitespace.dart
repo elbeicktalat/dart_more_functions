@@ -4,8 +4,8 @@
 
 part of string_helpers;
 
-String getRemoveWhitespaces(String string) {
-  return string.replaceAll(' ', '');
+extension StringWhitespace on String {
+  String get removeAllWhitespaces => replaceAll(' ', '');
 }
 
 //assertions
