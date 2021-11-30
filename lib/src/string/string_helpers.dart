@@ -4,11 +4,11 @@
 
 library string_helpers;
 
-part 'cases/lower/extension_string_case_lower.dart';
 part 'cases/string_case_assertions.dart';
 
-part 'cases/string_upper_case.dart';
+part 'cases/string_lower_case.dart';
 
+part 'cases/string_upper_case.dart';
 part 'chars/char_getters.dart';
 part 'chars/char_position.dart';
 part 'utils/counters.dart';
