@@ -2,8 +2,8 @@
 // Use of this source code is governed by a MIT-style license that can be
 // found in the LICENSE file.
 
-import 'package:more_functions/more_functions.dart';
+part of string_helpers;
 
-void main() {
-  print('hello amazing world!'.wordAt(1));
+extension StringWordTransformation on String {
+  List<String> get toWords => split(' ');
 }
