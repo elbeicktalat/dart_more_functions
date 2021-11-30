@@ -5,6 +5,29 @@
 part of string_helpers;
 
 extension StringWhitespaceAssertion on String {
+  ///Check if this [string] has whitespaces.
+  ///```dart
+  /// 'HelloWorld'.hasWhitespaces; // returns false
+  /// 'hello world!'.hasWhitespaces; // returns true
+  ///```
+  bool get hasWhitespaces {
+    return contains(RegExp(r' '));
+  }
+
+  ///Check if this [string] has only whitespaces.
+  ///```dart
+  /// 'Hello world!'.hasOnlyWhitespaces; // returns false
+  /// ''.hasOnlyWhitespaces; // returns false because is empty.
+  /// ' '.hasOnlyWhitespaces; // returns true
+  ///```
+  bool? get hasOnlyWhitespaces {
+    if (isNotEmpty) {
+      //revers regExp and check if list of Matches is empty.
+      return RegExp(r'[^ ]').allMatches(this).isEmpty;
+    }
+    return false;
+  }
+
 //assertions
 //TODO: add has whitespace.
 //TODO: add has whitespace before [char].
