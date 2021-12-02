@@ -5,7 +5,7 @@
 part of string_helpers;
 
 extension StringCaseAssertion on String {
-  ///[isUpperCase] check if the entire characters is majuscule.
+  ///[isUpperCase] Check if the entire string is majuscule.
   ///```dart
   /// 'Dart'.isUpperCase // false
   /// 'DARt'.isUpperCase // false
@@ -13,7 +13,7 @@ extension StringCaseAssertion on String {
   ///```
   bool get isUpperCase => this == toUpperCase();
 
-  ///[isLowerCase] check if the entire characters is minuscule.
+  ///[isLowerCase] Check if the entire string is minuscule.
   ///```dart
   /// 'Dart'.isLowerCase // false
   /// 'darT'.isLowerCase // false
@@ -21,39 +21,39 @@ extension StringCaseAssertion on String {
   ///```
   bool get isLowerCase => this == toLowerCase();
 
-  ///[firstIsUpperCase] check if the first character is majuscule.
+  ///[firstCharIsUpperCase] Check if the first character is majuscule.
   ///```dart
   /// 'dart'.firstIsUpperCase // false
   /// 'dART'.firstIsUpperCase // false
   /// 'Dart'.firstIsUpperCase // true
   ///```
-  bool get firstIsUpperCase => firstChar == firstChar.toUpperCase();
+  bool get firstCharIsUpperCase => firstChar == firstChar.toUpperCase();
 
-  ///[lastIsUpperCase] check if the last character is majuscule.
+  ///[lastCharIsUpperCase] Check if the last character is majuscule.
   ///```dart
   /// 'dart'.lastIsUpperCase // false
   /// 'DARt'.lastIsUpperCase // false
   /// 'darT'.lastIsUpperCase // true
   ///```
-  bool get lastIsUpperCase => lastChar == lastChar.toUpperCase();
+  bool get lastCharIsUpperCase => lastChar == lastChar.toUpperCase();
 
-  ///[firstIsLowerCase] check if the first character is minuscule.
+  ///[firstCharIsLowerCase] Check if the first character is minuscule.
   ///```dart
   /// 'DART'.firstIsLowerCase // false
   /// 'Dart'.firstIsLowerCase // false
   /// 'darT'.firstIsLowerCase // true
   ///```
-  bool get firstIsLowerCase => firstChar == firstChar.toLowerCase();
+  bool get firstCharIsLowerCase => firstChar == firstChar.toLowerCase();
 
-  ///[lastIsLowerCase] check if the last character is minuscule.
+  ///[lastCharIsLowerCase] Check if the last character is minuscule.
   ///```dart
   /// DART'.lastIsLowerCase // false
   /// darT'.lastIsLowerCase // false
   /// Dart'.lastIsLowerCase // true
   ///```
-  bool get lastIsLowerCase => lastChar == lastChar.toLowerCase();
+  bool get lastCharIsLowerCase => lastChar == lastChar.toLowerCase();
 
-  ///[charAtIsUpperCase] check if character at [index] is majuscule.
+  ///[charAtIsUpperCase] Check if character at [index] is majuscule.
   ///```dart
   /// 'Dart'.charAtIsUpperCase(1) // false
   /// 'dArt'.charAtIsUpperCase(1) // true
@@ -61,11 +61,61 @@ extension StringCaseAssertion on String {
   bool charAtIsUpperCase(int index) =>
       charAt(index) == charAt(index).toUpperCase();
 
-  ///[charAtIsLowerCase] check if character at [index] is minuscule.
+  ///[charAtIsLowerCase] Check if character at [index] is minuscule.
   ///```dart
   /// 'dArt'.charAtIsLowerCase(1) // false
   /// 'DaRT'.charAtIsLowerCase(1) // true
   ///```
   bool charAtIsLowerCase(int index) =>
       charAt(index) == charAt(index).toLowerCase();
+
+  ///[firstWordIsUpperCase] Check if the first word characters is majuscule.
+  ///```dart
+  /// 'hello world!'.firstWordIsUpperCase // false
+  /// 'Hello world!'.firstWordIsUpperCase // false
+  /// 'HELLO world!'.firstWordIsUpperCase // true
+  ///```
+  bool get firstWordIsUpperCase => firstWord == firstWord.toUpperCase();
+
+  ///[firstWordIsUpperCase] Check if the first word characters is majuscule.
+  ///```dart
+  /// 'hello world!'.lastWordIsUpperCase // false
+  /// 'hello World!'.lastWordIsUpperCase // false
+  /// 'hello WORLD!'.lastWordIsUpperCase // true
+  ///```
+  bool get lastWordIsUpperCase => lastWord == lastWord.toUpperCase();
+
+  ///[firstWordIsLowerCase] Check if the first word characters is minuscule.
+  ///```dart
+  /// 'hello world!'.firstWordIsLowerCase // true
+  /// 'Hello world!'.firstWordIsLowerCase // false
+  /// 'HELLO world!'.firstWordIsLowerCase // false
+  ///```
+  bool get firstWordIsLowerCase => firstWord == firstWord.toLowerCase();
+
+  ///[lastWordIsLowerCase] Check if the last word characters is minuscule.
+  ///```dart
+  /// 'hello WORLD!'.lastWordIsLowerCase // false
+  /// 'hello World!'.lastWordIsLowerCase // false
+  /// 'hello world!'.lastWordIsLowerCase // true
+  ///```
+  bool get lastWordIsLowerCase => lastWord == lastWord.toLowerCase();
+
+  ///[wordAtIsUpperCase] Check if word characters at [index] is majuscule.
+  ///```dart
+  /// 'hello amazing world!'.wordAtIsUpperCase(1); // false
+  /// 'hello Amazing world!'.wordAtIsUpperCase(1); // false
+  /// 'hello AMAZING world!'.wordAtIsUpperCase(1); // true
+  ///```
+  bool wordAtIsUpperCase(int index) =>
+      wordAt(index) == wordAt(index).toUpperCase();
+
+  ///[wordAtIsLowerCase] Check if word characters at [index] is minuscule.
+  ///```dart
+  /// 'hello AMAZING world!'.wordAtIsUpperCase(1); // false
+  /// 'hello Amazing world!'.wordAtIsUpperCase(1); // false
+  /// 'hello amazing world!'.wordAtIsUpperCase(1); // true
+  ///```
+  bool wordAtIsLowerCase(int index) =>
+      wordAt(index) == wordAt(index).toLowerCase();
 }
