@@ -5,7 +5,7 @@
 part of string_helpers;
 
 extension StringCounters on String {
-  ///[charCount] Returns the character count of the this [string].
+  ///[countChar] Returns the character count of the this [string].
   ///
   /// You are able to non counting some character by add those in [excludes].
   ///
@@ -16,14 +16,14 @@ extension StringCounters on String {
   /// 'Dart lang'.charCount(ignoreWhitespace: true) // returns 8
   /// 'Dart lang'.charCount(ignoreWhitespace: true, excludes: ['n', 'g']) // returns 6
   ///```
-  int charCount({
+  int countChar({
     List<String>? excludes,
     bool ignoreWhitespace = false,
   }) {
-    List<String> chars = split('');
+    List<String> chars = toChars();
     List<String> resolved = [];
     if (ignoreWhitespace) {
-      chars = removeAllWhitespaces.split('');
+      chars = removeAllWhitespaces.toChars();
     }
     for (String char in chars) {
       resolved.add(char);
@@ -38,7 +38,7 @@ extension StringCounters on String {
     return resolved.length;
   }
 
-  ///[wordsCount] Returns the count of [words] of the this [string].
+  ///[countWords] Returns the count of [words] of the this [string].
   ///
   /// You are able to non counting some words by add those in [excludes].
   ///
@@ -54,17 +54,17 @@ extension StringCounters on String {
   /// 'hello world !'.wordsCount(ignoreSymbols: false, excludes: ['!']); // [hello, world] returns 2
   /// 'hello world !'.wordsCount(ignoreSymbols: false, excludes: ['world']); // [hello, !] returns 2
   /// ```
-  int wordsCount({
+  int countWords({
     List<String>? excludes,
     bool ignoreSymbols = true,
   }) {
-    List<String> words = split(' ');
+    List<String> words = toWords();
     List<String> resolved = [];
     if (ignoreSymbols) {
-      words = removeAllSymbols.split(' ');
+      words = removeAllSymbols.toWords();
     }
     for (String word in words) {
-      if (word != '') resolved.add(word.removeAllWhitespaces);
+      if (word.isNotEmpty) resolved.add(word.removeAllWhitespaces);
       if (excludes != null) {
         for (String exclude in excludes) {
           if (word == exclude) {
