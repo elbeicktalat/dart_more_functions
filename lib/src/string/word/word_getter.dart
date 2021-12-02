@@ -9,19 +9,19 @@ extension StringWordGetter on String {
   /// ```dart
   /// 'hello world!'.firstWord; // returns 'hello'
   /// ```
-  String get firstWord => toWords.first;
+  String get firstWord => toWords().first;
 
   ///[lastWord] Returns the first word in this string.
   /// ```dart
   /// 'hello world!'.lastWord; // returns 'world!'
   /// ```
-  String get lastWord => toWords.last;
+  String get lastWord => toWords().last;
 
   ///[wordAt] Returns word in this string at [index].
   /// ```dart
   /// 'hello amazing world!'.wordAt(1) // returns 'amazing'
   /// ```
   String wordAt(int index) {
-    return toWords.elementAt(index);
+    return toWords().elementAt(index);
   }
 }

@@ -5,5 +5,9 @@
 part of string_helpers;
 
 extension StringCharTransformation on String {
-  List<String> get toChars => split('');
+  ///[toChars] Split this string into characters.
+  ///```dart
+  /// 'hello world!'.toChars(); // returns [h,e,l,l,o, ,w,o,r,l,d,!]
+  ///```
+  List<String> toChars() => split('');
 }

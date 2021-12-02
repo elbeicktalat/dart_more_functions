@@ -5,5 +5,9 @@
 part of string_helpers;
 
 extension StringWordTransformation on String {
-  List<String> get toWords => split(' ');
+  ///[toWords] Split this string into words.
+  ///```dart
+  /// 'hello world!'.toWords(); // returns [hello, world!]
+  ///```
+  List<String> toWords() => split(' ');
 }
