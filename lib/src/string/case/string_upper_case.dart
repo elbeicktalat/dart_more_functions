@@ -96,9 +96,13 @@ extension StringUpperCase on String {
   ///```dart
   /// 'upper snake case' // 'UPPER_SNAKE_CASE'
   ///```
-
   String toUpperSnakeCase() {
-    if (isUpperCase) return replaceAll(' ', '_');
-    return toUpperCase().replaceAll(' ', '_');
+    String subject = toUpperCase();
+    final List<String> words = subject.toWords();
+    final List<String> resolved = [];
+    for (String word in words) {
+      if (word != '') resolved.add(word);
+    }
+    return resolved.join('_');
   }
 }

@@ -100,7 +100,12 @@ extension StringLowerCase on String {
   /// 'LOWER UNDERSCORE CASE'.toLowerSnakeCase(); // 'lower_underscore_case'
   ///```
   String toLowerSnakeCase() {
-    if (isLowerCase) return replaceAll(' ', '_');
-    return toLowerCase().replaceAll(' ', '_');
+    String subject = toLowerCase();
+    final List<String> words = subject.toWords();
+    final List<String> resolved = [];
+    for (String word in words) {
+      if (word != '') resolved.add(word);
+    }
+    return resolved.join('_');
   }
 }
