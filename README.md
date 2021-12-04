@@ -37,98 +37,171 @@ List of Helpers functions type:
 
 ## String
 
-1. [Case Assertions](#case-assertions)
-1. [Upper Case](#upper-case)
-1. [Upper Case](#lower-case)
-1. [Char](#char)
+1. [Case](#case)
+   1. [Case Assertions](#case-assertions)
+   2. [Upper Case](#upper-case)
+   3. [Upper Case](#lower-case)
+2. [Char](#char)
+   1. [Char Assertions](#char-assertions)
+   1. [Char Getters](#char-getters)
+   1. [Char Position](#char-position)
+   1. [Char Transformation](#char-transformation)
+3. [Word](#word)
+   1. [Word Getters](#word-getters)
+   1. [Word Position](#word-position)
+   1. [Word Transformation](#word-transformation)
+4. [Generic Utils](#generic-utils)
+   1. [Counters](#counters)
+   2. [Symbol](#symbol)
+      1. [Add Symbol](#add-symbol)
+      2. [Remove Symbol](#remove-symbol)
+      3. [Assertion Symbol](#assertion-symbol)
+   3. [Whitespace](#whitespace)
+      1. [Add Whitespace](#add-whitespace)
+      1. [Remove Whitespace](#remove-whitespace)
+      1. [Assertion Whitespace](#assertion-whitespace)
 
-##### Case Assertions
+### CASE
+
+#### Case Assertions
 
 ```dart
-// Regular functions
-bool getIsUpperCase(String string);
+//entire string
+print('Dart is awesome!'.isUpperCase); // false
+print('Dart is awesome!'.isLowerCase); // false
 
-bool getIsLowerCase(String string);
+//characters
+print('Dart is awesome!'.firstCharIsUpperCase); // true
+print('Dart is awesome!'firstCharIsLowerCase); // false
+print('Dart is awesome!'.lastCharIsUpperCase); // false
+print('Dart is awesome!'.lastCharIsLowerCase); // true
+print('Dart is awesome!'.charAtIsUpperCase(1)); // ['a'] false
+print('Dart is awesome!'.charAtIsLowerCase(1)); // ['a'] true
 
-bool getFirstIsUpperCase(String string);
-
-bool getLastIsUpperCase(String string);
-
-bool getFirstIsLowerCase(String string);
-
-bool getLastIsLowerCase(String string);
-
-bool getCharAtIsUpperCase(String string, int index);
-
-bool getCharAtIsLowerCase(String string, int index);
-
-// Extension functions
-print('Dart'.isUpperCase); // false
-print('Dart'.isLowerCase); // false
-print('Dart'.firstIsUpperCase); // true
-print('Dart'firstIsLowerCase); // false
-print('Dart'.lastIsLowerCase); // true
-print('Dart'.charAtIsUpperCase(1)); // false
-print('Dart'.charAtIsLowerCase(1)); // true
-
+//words
+print('Dart is awesome!'.firstWordIsUpperCase); // false
+print('Dart is awesome!'firstWordIsLowerCase); // false
+print('Dart is awesome!'.lastWordIsUpperCase); // false
+print('Dart is awesome!'.lastWordIsLowerCase); // true
+print('Dart is awesome!'.wordAtIsUpperCase(1)); // ['is'] false
+print('Dart is awesome!'.wordAtIsLowerCase(1)); // ['is'] true
 ```
 
-
-##### Upper Case
+#### Upper Case
 
 ```dart
-// Regular functions
-String getFirstToUpperCase(String string, {bool allWords = false});
-
-String getLastToUpperCase(String string, {bool allWords = false});
-
-String getUpperCamelCase(String string, {bool attached = false, String betweenWords = ''});
-
-String getUpperSnakeCase(String string);
-
-// Extension functions
-print('dart'.firstToUpperCase); // 'Dart'
-print('dart'.firstToLowerCase); // 'darT'
-print('upper camel case'.toLowerCamelCase); // 'Upper Camel Case'
-print('upper underscore case'.toLowerSnakeCase); // 'UPPER_UNDERSCORE_CASE'
+print('dart'.firstCharToUpperCase()); // 'Dart'
+print('dart'.firstCharToLowerCase()); // 'darT'
+print('upper camel case'.toUpperCamelCase()); // 'Upper Camel Case'
+print('upper underscore case'.toUpperSnakeCase()); // 'UPPER_UNDERSCORE_CASE'
+print('upper kebab case'.toUpperKebabCase()); // 'UPPER-KEBAB-CASE'
 ```
 
-##### Lower Case
+#### Lower Case
 
 ```dart
-// Regular functions
-String getFirstToLowerCase(String string, {bool allWords = false});
-
-String getLastToLowerCase(String string, {bool allWords = false});
-
-String getLowerCamelCase(String string, {bool attached = false, String betweenWords = ''});
-
-String getLowerSnakeCase(String string);
-
-// Extension functions
-print('Dart'.firstToLowerCase); // 'dart'
-print('DART'.firstToLowerCase); // 'DARt'
-print('LOWER CAMEL CASE'.toLowerCamelCase); // 'lower Camel Case'
-print('lower underscore case'.toLowerSnakeCase); // 'lower_underscore_case'
+print('DART'.firstCharToLowerCase()); // 'dART'
+print('DART'.firstCharToLowerCase()); // 'DARt'
+print('LOWER CAMEL CASE'.toLowerCamelCase()); // 'lower Camel Case'
+print('LOWER SNAKE CASE'.toLowerSnakeCase()); // 'lower_underscore_case'
+print('LOWER KEBAB CASE'.toLowerKebabCase()); // 'lower-kebab-case'
 ```
 
-##### Char
+### Char
+
+#### Char Assertions
 
 ```dart
-// Regular functions
-String getFirstChar(String string);
+print('Dart is awesome!'.hasChars); // true 
+print('Dart is awesome!'.hasOnlyChars); // false  
+print('Dart is awesome!'.hasOnlyUpperChars); // false   
+print('Dart is awesome!'.hasOnlyLowerChars); // false
+```
 
-String getLastChar(String string);
+#### Char Getters
 
-int getLastCharIndex(String string);
-
-String getCharAt(String string, int index);
-
-// Extension functions
+```dart
 print('dart'.firstChar); // returns 'd'
 print('dart'.lastChar); // returns 't'
-print('dart'.lastCharIndex); // returns 3
 print('dart'.charAt(1)); // returns 'a'
+```
+
+#### Char Position
+
+```dart
+print('dart'.lastCharIndex); // returns 3
+print('dart'.indexOfChar('a')); // returns 1
+```
+
+#### Char Transformation
+
+```dart
+print('dart'.toChars()); // returns ['d','a','r','t']
+```
+
+### Word
+
+#### Word Getters
+
+```dart
+print('Dart is awesome!'.firstWord); // 'Dart' 
+print('Dart is awesome!'.lastWord); // 'awesome!'  
+print('Dart is awesome!'.wordAt(1)); // 'is'   
+```
+
+#### Word Position
+
+```dart
+print('Dart is awesome!'.indexOfWord('Dart')); // returns 0 
+```
+
+#### Word Transformation
+
+```dart
+print('Dart is awesome!'.toWords()); // ['Dart','is','awesome!'] 
+```
+
+### Generic Utils
+
+#### Counters
+
+```dart
+print('Dart is awesome!'.countChar()); // 16
+print('Dart is awesome!'.countWord()); // 3
+```
+
+#### Symbol
+
+##### Add Symbol
+
+`Not implemented yet.`
+
+##### Remove Symbol
+
+`Not implemented yet.`
+
+##### Assertion Symbol
+
+```dart
+print('Dart is awesome!'.hasSymbols); // true
+print('Dart is awesome!'.hasOnlySymbols); // false
+```
+
+#### Whitespace
+
+##### Add Whitespace
+
+`Not implemented yet.`
+
+##### Remove Whitespace
+
+`Not implemented yet.`
+
+##### Assertion Whitespace
+
+```dart
+print('Dart is awesome!'.hasWhitespaces); // true
+print('Dart is awesome!'.hasOnlyWhitespaces); // false
 ```
 
 [return up](#more_functions)
