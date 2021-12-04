@@ -7,9 +7,7 @@ library string_helpers;
 part 'case/string_case_assertion.dart';
 part 'case/string_lower_case.dart';
 part 'case/string_upper_case.dart';
-
 part 'char/char_assertion.dart';
-
 part 'char/char_getter.dart';
 part 'char/char_position.dart';
 part 'char/char_transformation.dart';
@@ -21,4 +19,7 @@ part 'utils/whitespace/add_whitespace.dart';
 part 'utils/whitespace/remove_whitespace.dart';
 part 'utils/whitespace/whitespace_assertion.dart';
 part 'word/word_getter.dart';
+
+part 'word/word_position.dart';
+
 part 'word/word_transformation.dart';
