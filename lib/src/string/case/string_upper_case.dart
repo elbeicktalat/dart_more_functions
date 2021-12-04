@@ -105,4 +105,18 @@ extension StringUpperCase on String {
     }
     return resolved.join('_');
   }
+
+  ///[toUpperKebabCase] Capitalize the all characters and replace whitespaces with '-'.
+  ///```dart
+  /// 'upper kebab case'.toUpperKebabCase(); // 'UPPER-KEBAB-CASE'
+  ///```
+  String toUpperKebabCase() {
+    String subject = toUpperCase();
+    final List<String> words = subject.toWords();
+    final List<String> resolved = [];
+    for (String word in words) {
+      if (word != '') resolved.add(word);
+    }
+    return resolved.join('-');
+  }
 }

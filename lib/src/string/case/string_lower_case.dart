@@ -108,4 +108,19 @@ extension StringLowerCase on String {
     }
     return resolved.join('_');
   }
+
+  ///[toLowerSnakeCase] Converts to minuscule all characters and replace whitespaces with underscore '_'.
+  ///```dart
+  /// 'lower kebab case'.toLowerKebabCase(); // 'lower-kebab-case'
+  /// 'LOWER KEBAB CASE'.toLowerKebabCase(); // 'lower-kebab-case'
+  ///```
+  String toLowerKebabCase() {
+    String subject = toLowerCase();
+    final List<String> words = subject.toWords();
+    final List<String> resolved = [];
+    for (String word in words) {
+      if (word != '') resolved.add(word);
+    }
+    return resolved.join('-');
+  }
 }
