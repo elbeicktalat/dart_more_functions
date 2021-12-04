@@ -8,4 +8,10 @@ extension StringCharPosition on String {
   ///[lastCharIndex] Returns the index of the last character of this [string],
   /// without leading and trailing whitespace counting.
   int get lastCharIndex => trim().length - 1;
+
+  ///[indexOfChar] Returns the index of the given character of this [string],
+  /// without leading and trailing whitespace counting.
+  int indexOfChar(String char) {
+    return trim().toChars().indexOf(char);
+  }
 }
